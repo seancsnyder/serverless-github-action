@@ -1,5 +1,4 @@
-FROM node:10-slim
-
+FROM nikolaik/python-nodejs:python3.8-nodejs13
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
@@ -11,5 +10,5 @@ LABEL "com.github.actions.description"="Wraps the Serverless Framework to enable
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@1.54.0
+RUN npm i -g serverless@1.74.0
 ENTRYPOINT ["serverless"]
